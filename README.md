@@ -25,5 +25,5 @@ npm install
 ### 4. Run Eleventy
 
 ```
-npm start
+npm run dev
 ```

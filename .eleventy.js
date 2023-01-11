@@ -4,21 +4,19 @@ const markdownItAnchor = require("markdown-it-anchor");
 
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function(eleventyConfig) {
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("./_site/img");
-  eleventyConfig.addPassthroughCopy("./_site/css");
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("./_site/assets");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
   // Customize Markdown library and settings:
@@ -31,7 +29,7 @@ module.exports = function(eleventyConfig) {
       class: "direct-link",
       symbol: "#"
     }),
-    level: [1,2,3,4],
+    level: [1, 2, 3, 4],
     slugify: eleventyConfig.getFilter("slugify")
   });
 

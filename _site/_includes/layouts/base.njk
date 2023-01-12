@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/prism-diff.css' | url }}">
+    <link rel="icon" href="/assets/img/favicon.ico">
   </head>
   <body>
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-    </header>
-
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
-
-    <footer></footer>
+    {{ content | safe }}
   </body>
 </html>

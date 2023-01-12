@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     tailwindcss: {},
+    autoprefixer: {},
     cssnano: {},
     'postcss-preset-env': {
       features: {
@@ -12,7 +13,7 @@ module.exports = {
         grid: true
       },
       preserve: true,
-      stage: 2,
+      stage: 3,
       importFrom: {
         customMedia: {
           '--xs': '(min-width: 375px)',

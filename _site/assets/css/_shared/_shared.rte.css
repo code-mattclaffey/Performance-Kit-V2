@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: theme('fontWeight.semibold');
+}
+
+h2 {
+  font-size: theme('fontSize.3xl');
+}
+
+h3 {
+  font-size: theme('fontSize.2xl');
+}
+
+h4 {
+  font-size: theme('fontSize.xl');
+}
+
+h5, h6 {
+  font-size: theme('fontSize.lg');
+}
+
+.direct-link {
+  color: theme('colors.secondary.DEFAULT');
+}
+
+.direct-link:hover,
+.direct-link:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: theme('screens.md')) {
+  h2 {
+    font-size: theme('fontSize.4xl');
+  }
+
+  h3 {
+    font-size: theme('fontSize.3xl');
+  }
+
+  h4 {
+    font-size: theme('fontSize.2xl');
+  }
+
+  h5, h6 {
+    font-size: theme('fontSize.xl');
+  }
+}
+

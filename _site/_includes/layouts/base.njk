@@ -6,12 +6,19 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
 
-    <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | url }}">
+    <link rel="stylesheet" href="{{ stylesheet | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/prism-diff.css' | url }}">
     <link rel="icon" href="/assets/img/favicon.ico">
   </head>
   <body>
+    <header class="bg-primary pt-5">
+      <nav class="container mx-auto px-4 max-w-6xl flex">
+        <a href="/" class="font-semibold text-xl text-white font-sans hover:text-secondary transition-all">
+          🚀 The Performance Kit
+        </a>
+      </nav>
+    </header>
     {{ content | safe }}
   </body>
 </html>

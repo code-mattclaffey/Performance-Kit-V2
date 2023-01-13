@@ -1,0 +1,11 @@
+body {
+  color: theme('colors.primary.dark');
+  font-size: theme('fontSize.base');
+}
+
+@media (min-width: theme('screens.md')) {
+  body {
+    color: theme('colors.primary.dark');
+    font-size: theme('fontSize.lg');
+  }
+}

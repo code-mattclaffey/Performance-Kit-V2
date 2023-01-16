@@ -5,7 +5,8 @@ const markdownItAnchor = require("markdown-it-anchor");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./_site/assets");
+  eleventyConfig.addPassthroughCopy("./_site/assets/img");
+  eleventyConfig.addPassthroughCopy("./_site/assets/fonts");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight);

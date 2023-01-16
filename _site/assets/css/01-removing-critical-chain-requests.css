@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "https://fonts.googleapis.com/css?family=Monoton:400|Rubik:300,400,500,600,700,800,900,i&format=ttf";
+@import "./_shared/_shared.body.css";
+@import "./_shared/_shared.rte.css";

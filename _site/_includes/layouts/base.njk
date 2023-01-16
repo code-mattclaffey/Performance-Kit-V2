@@ -1,24 +1,11 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
-
+    {% include 'components/_seo.njk' %}
     <link rel="stylesheet" href="{{ stylesheet | url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/prism-base16-monokai.dark.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/prism-diff.css' | url }}">
-    <link rel="icon" href="/assets/img/favicon.ico">
   </head>
   <body>
-    <header class="bg-primary pt-5">
-      <nav class="container mx-auto px-4 max-w-6xl flex">
-        <a href="/" class="font-semibold text-xl text-white font-sans hover:text-secondary transition-all">
-          🚀 The Performance Kit
-        </a>
-      </nav>
-    </header>
+    {% include 'components/_header.njk' %}
     {{ content | safe }}
   </body>
 </html>

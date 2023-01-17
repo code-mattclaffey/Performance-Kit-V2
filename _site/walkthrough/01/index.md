@@ -1,8 +1,8 @@
 ---
-layout: lessons/01-removing-critical-chain-requests.njk
+layout: layouts/post.njk
 title: Critical Chain Requests
 description: This section is all about fonts and how we can load fonts nice and fast. The way these sessions will carry out is that we will act as if we have a requirement from the client and our role is to solve that requirement on the page. Each page will have a performance issue and over time we will slowly start to see the page getting faster and faster.
-backUrl: '/pathways/workshop'
+backUrl: '/walkthrough'
 ---
 
 ## Client Requirement

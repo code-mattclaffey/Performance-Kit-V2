@@ -1,17 +1,14 @@
 ---
 layout: layouts/post.njk
-title: Critical Chain Requests
-description: This section is all about fonts and how we can load fonts nice and fast. The way these sessions will carry out is that we will act as if we have a requirement from the client and our role is to solve that requirement on the page. Each page will have a performance issue and over time we will slowly start to see the page getting faster and faster.
+title: Tutorial - Loading Fonts
+description: This section is all about fonts and how we can load fonts nice and fast. The way these sessions will carry out is that we will act as if we have a requirement from the client and our role is to solve that requirement on the excercise page. Each page will have a performance issue and over time we will slowly start to see the page getting faster and faster.
 backUrl: '/walkthrough'
+cta: '/excercises/01'
 ---
-
-## Client Requirement
-
-The client has a blog site which has a lot of rich content on the page however, customers have been complaining about how long it is taking before they can see the post. Our goal is to investigate what the problem is to see how might we reduce the amount of complaints from our customers.
 
 ## The Task
 
-Our task is to debug the page to see why our fonts are loading really slow.
+The client has a blog site which has a lot of rich content on the page however, customers have been complaining about how long it is taking before they can see the post. Our goal is to investigate what the problem is to see how might we reduce the amount of complaints from our customers.
 
 ### Step One - Debugging the network
 

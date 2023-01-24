@@ -1,16 +1,17 @@
-const { DateTime } = require("luxon");
-const fs = require("fs").promises;
+const { DateTime } = require('luxon');
+const fs = require('fs').promises;
 
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./_site/assets/img");
-  eleventyConfig.addPassthroughCopy("./_site/assets/fonts");
+  eleventyConfig.addPassthroughCopy('./_site/assets/img');
+  eleventyConfig.addPassthroughCopy('./_site/assets/fonts');
+  eleventyConfig.addPassthroughCopy('./_site/assets/js/');
 
   // Add plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addFilter("getContentFromFile", async function (path) {
+  eleventyConfig.addFilter('getContentFromFile', async function (path) {
     const content = await fs.readFile(path, 'utf8');
 
     return content;
@@ -19,18 +20,13 @@ module.exports = function (eleventyConfig) {
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "liquid"
-    ],
+    templateFormats: ['md', 'njk', 'html', 'liquid'],
 
     // Pre-process *.md files with: (default: `liquid`)
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: 'njk',
 
     // Pre-process *.html files with: (default: `liquid`)
-    htmlTemplateEngine: "njk",
+    htmlTemplateEngine: 'njk',
 
     // -----------------------------------------------------------------
     // If your site deploys to a subdirectory, change `pathPrefix`.
@@ -43,15 +39,15 @@ module.exports = function (eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
 
     // Optional (default is shown)
-    pathPrefix: "/",
+    pathPrefix: '/',
     // -----------------------------------------------------------------
 
     // These are all optional (defaults are shown):
     dir: {
-      input: "./_site",
-      includes: "_includes",
-      data: "_data",
-      output: "dist"
-    }
+      input: './_site',
+      includes: '_includes',
+      data: '_data',
+      output: 'dist',
+    },
   };
 };

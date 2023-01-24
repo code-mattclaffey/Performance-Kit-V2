@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: Tutorial - Loading Fonts
 description: This section is all about fonts and how we can load fonts nice and fast. The way these sessions will carry out is that we will act as if we have a requirement from the client and our role is to solve that requirement on the excercise page. Each page will have a performance issue and over time we will slowly start to see the page getting faster and faster.
 backUrl: '/walkthrough'
+postId: 'font-loading'
 cta: '/excercises/01'
 ---
 

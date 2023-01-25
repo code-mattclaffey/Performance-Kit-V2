@@ -44,7 +44,7 @@
 
   const updateMarkCompleteButtonUI = () => {
     buttons.forEach((button) => {
-      const isCompleted = completedLessons.find((lesson) => lesson === button.dataset.postid);
+      const isCompleted = completedLessons?.find((lesson) => lesson === button.dataset.postid);
 
       if (isCompleted) {
         button.classList.add('completed');
@@ -58,20 +58,40 @@
 
   const addCompleteFlagToSections = () => {
     sections.forEach((section) => {
-      const isCompleted = completedLessons.find((lesson) => lesson === section.id);
+      const isCompleted = completedLessons?.find((lesson) => lesson === section.id);
 
       if (isCompleted) {
         section.classList.add('completed');
-        section.querySelector('[data-complete-tag]').classList.remove('invisible');
+        const tick = createCompletedTick('section');
+        const a = section.getElementsByTagName('a')[0];
+        a.appendChild(tick);
       } else {
         section.classList.remove('completed');
-        section.querySelector('[data-complete-tag]').classList.add('invisible');
+        const tick = section.querySelector('[data-complete-tag]');
+        tick?.remove();
       }
     });
   };
 
+  const handleButtonTicks = (btn, action = null) => {
+    if (action === 'add') {
+      const tick = createCompletedTick('button');
+      btn.appendChild(tick);
+    } else {
+      const btnTicks = document.querySelectorAll('[data-completed-tick]');
+      btnTicks.forEach((btn) => btn.remove());
+    }
+  };
+
+  const createCompletedTick = (element) => {
+    const span = document.createElement('span');
+    span.innerHTML = '&#9989';
+    element === 'section' ? span.classList.add('text-4xl', 'absolute', 'right-6') : span.classList.add('text-2xl', 'ml-2', 'block');
+    element === 'section' ? span.setAttribute('data-complete-tag', '') : span.setAttribute('data-completed-tick', '');
+    return span;
+  };
+
   const updateButton = (btn, action) => {
-    console.log('updateButton called');
     if (action === 'remove') {
       btn.classList.remove('bg-primary-light', 'text-primary', 'hover:bg-secondary-hover', 'hover:text-primary', 'completed');
 
@@ -85,19 +105,6 @@
       btn.innerHTML = 'Lesson complete';
       btn.dataset.completed = 'true';
       handleButtonTicks(btn, 'add');
-    }
-  };
-
-  const handleButtonTicks = (btn, action = null) => {
-    if (action === 'add') {
-      const span = document.createElement('span');
-      span.innerHTML = '&#9989';
-      span.classList.add('text-2xl', 'ml-2', 'block');
-      span.setAttribute('data-completed-tick', '');
-      btn.appendChild(span);
-    } else {
-      const btnTicks = document.querySelectorAll('[data-completed-tick]');
-      btnTicks.forEach((btn) => btn.remove());
     }
   };
 

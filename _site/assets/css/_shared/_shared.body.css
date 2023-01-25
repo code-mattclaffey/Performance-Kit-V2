@@ -1,11 +1,12 @@
 body {
   color: theme('colors.primary.dark');
-  font-size: theme('fontSize.base');
+  font-size: theme('fontSize.lg');
+  line-height: 1.6;
 }
 
 @media (min-width: theme('screens.md')) {
   body {
     color: theme('colors.primary.dark');
-    font-size: theme('fontSize.lg');
+    font-size: theme('fontSize.xl');
   }
 }

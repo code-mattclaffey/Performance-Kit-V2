@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: theme('fontWeight.semibold');
+  line-height: 1.3;
 }
 
 h2 {
@@ -18,6 +19,25 @@ h5, h6 {
   font-size: theme('fontSize.lg');
 }
 
+ul,
+ol {
+  list-style: disc;
+  padding-left: theme('spacing.12');
+}
+
+ul li + li,
+ol li + li {
+  margin-top: theme('spacing.4');
+}
+
+blockquote {
+  background: theme('colors.primary.light');
+  border-left: 10px solid theme('colors.secondary.DEFAULT');
+  border-radius: 8px;
+  padding: theme('spacing.6');
+  font-style: italic;
+}
+
 .direct-link {
   color: theme('colors.secondary.DEFAULT');
 }
@@ -27,21 +47,46 @@ h5, h6 {
   text-decoration: underline;
 }
 
+.rte {
+  counter-reset: rte;
+}
+
+.rte > h3::before {
+  counter-increment: rte;
+  content: counter(rte) ". ";
+}
+
+.rte > h2:not(.rte > h2:first-child),
+.rte > h3:not([hidden]) {
+  border-top: 1px solid theme('colors.slate.200');
+  margin-top: theme('spacing.14') !important;
+  padding-top: theme('spacing.12');
+}
+
+.rte a {
+  color: theme('colors.primary.DEFAULT');
+  text-decoration: underline;
+}
+
+.rte a:hover {
+  text-decoration: none;
+}
+
 @media (min-width: theme('screens.md')) {
   h2 {
-    font-size: theme('fontSize.4xl');
+    font-size: theme('fontSize.6xl');
   }
 
   h3 {
-    font-size: theme('fontSize.3xl');
+    font-size: theme('fontSize.5xl');
   }
 
   h4 {
-    font-size: theme('fontSize.2xl');
+    font-size: theme('fontSize.4xl');
   }
 
   h5, h6 {
-    font-size: theme('fontSize.xl');
+    font-size: theme('fontSize.2xl');
   }
 }
 

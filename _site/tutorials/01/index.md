@@ -15,8 +15,6 @@ The client has a blog site which has a lot of rich content on the page however, 
 
 ### Setup
 
-> ADD VIDEO HERE
-
 On our high end machines we won't notice the performance implications so we need to setup our dev environment as if we are accessing the website using a lower spec device. On the exercise page, we need to do the following in our devtools:
 
 - Open up developer tools and head over to the Network panel.
@@ -30,8 +28,6 @@ Once these settings are set, click the record button and hard refresh the page.
 
 ### Debugging the network
 
-> ADD VIDEO HERE
-
 So what we should see in the Network is a tab known as "Waterfall". This will display a load of network requests and the order they loaded in.
 
 > When looking for issues in the waterfall tab a general rule of thumb is to see if the waterfall is going downwards and across far to the right. If the requests are not going straight down then we may have a critical chain request lying around.
@@ -43,8 +39,6 @@ On this page we have a critical chain request where we load our font.css in the 
 > A critical chain request is a request that has a dependency on another file to load before that file can then be loaded in the page.
 
 ### Decoupling CSS dependencies
-
-> ADD VIDEO HERE
 
 The first thing we want to do is to remove the critical chain request in our css file. Google fonts have a different way to load our css fonts into the page. To do this let's remove the import statement in the css file and add this snippet of code into our `<head />` element.
 
@@ -71,8 +65,6 @@ Now when we inspect our network again, we should see that nothing has changed to
 
 ### Using self-hosted fonts
 
-> ADD VIDEO HERE
-
 ```css
 /* Add this line to: _site/assets/css/01-removing-critical-chain-requests */
 @import "./_shared/_shared.fonts.css";
@@ -87,8 +79,6 @@ So let's do that instead. There are many benefits to serving your fonts locally 
 ![An image diagram of the devtool network and highlights of the performance improvement after we make the change](/assets/img/exercises/01/01-waterfall-step-4.webp)
 
 ### Resource hints
-
-> ADD VIDEO HERE
 
 Browsers can determine the priority of an asset which determines when the asset is loaded in the waterfall. We can use html resource hints to give an indicator to the browser to which fonts we need for this page to be completed.
 

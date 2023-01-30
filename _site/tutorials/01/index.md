@@ -70,10 +70,10 @@ Now when we inspect our network again, we should see that nothing has changed to
 @import "./_shared/_shared.fonts.css";
 ```
 
-So let's do that instead. There are many benefits to serving your fonts locally and that is:
+There are many benefits to serving your fonts locally and that is:
 
 - You can control the caching of those fonts. If they never change, they can have a very long max age adding to them.
-- Same domain - Same domain which means there won't be a DNS lookup and TLS handshake. This can add extra seconds on the initial request to a domain that is not your own.
+- Same domain - Same domain which means there won't be a DNS lookup and TLS handshake. This can add extra couple of 100 milliseconds to the request for the font when the domain is not your own.
 - More control (we will go into that next)
 
 ![An image diagram of the devtool network and highlights of the performance improvement after we make the change](/assets/img/exercises/01/01-waterfall-step-4.webp)
@@ -94,7 +94,7 @@ What you will start to see now is the Rubik Regular font request is loaded as a 
 
 ### Inline font declarations
 
-If you read the above you may have noticed it mention that preloading isn't the best approach for loading your fonts the fastest way because the page might not even be using that font yet we are telling the browser to load it in anyway.
+Preloading isn't the best approach for loading your fonts the fastest way because the page might not even be using that font yet we are telling the browser to load it in anyway.
 
 Another optimal solution is to add the font declarations inline in the `<head />` element instead of having them live in the stylesheet. This allows the browser to discover the font declarations sooner as the browser doesn't need to wait for the external stylesheet to download.
 
@@ -123,7 +123,7 @@ In the screenshot, I have an example of an inline font "medium" vs a local **inl
 
 ![An image diagram of the devtool network and highlights of the performance improvement after we make the change](/assets/img/exercises/01/01-waterfall-step-6.webp)
 
-> **Note:** make sure you inline this above any render blocking asset as it will slow down the load of these fonts.
+> **Note:** Make sure you inline this above any render blocking asset as it will slow down the load of these fonts.
 
 ### Resources
 

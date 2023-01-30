@@ -28,7 +28,7 @@ cd performance-kit
 ### Install dependencies
 
 ```bash
-nvm use && npm install
+npm install
 ```
 
 ### Run Eleventy

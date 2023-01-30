@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: Getting Started
 description: This section is all about getting stuck into solving performance problems. Some people learn differently to overs and for me, getting hands on really helps me to absorb that information. Before we get hands on we need to pull the repo down and setup our environment.
 backUrl: '/tutorials'
+postId: 'getting-started'
 ---
 
 ## What you need to know?

@@ -1,12 +1,17 @@
-
-<nav aria-label="Workshop Sessions" class="space-y-6">
-  <a href="/tutorials/00/getting-started" class="font-sans font-semibold block p-6 rounded-lg border border-primary-light bg-primary-light">🏳️ Getting Started</a>
-
-  <h2 class="font-sans font-medium text-xl md:text-3xl mb-8">✏️ Fonts</h2>
-  <div data-section id="font-part-one" class="flex justify-between items-center relative font-sans font-semibold rounded-lg border border-primary-light bg-primary-light" >
-    <a href="./01" class="flex justify-between items-center relative top-0 left-0 h-full w-full p-6">Part One</a>
-  </div>
-   <div data-section id="font-part-two" class="flex justify-between items-center relative font-sans font-semibold rounded-lg border border-primary-light bg-primary-light" >
-    <a href="./02" class="flex justify-between items-center relative top-0 left-0 h-full w-full p-6">Part Two (Coming Soon)</a>
-  </div>
-</nav>
+{% for section in navigation.tutorials %}
+  <h2 class="font-sans font-medium text-xl md:text-3xl mb-8">{{ section.title }}</h2>
+  {% for link in section.items %}
+    <div
+      data-section
+      id="{{ link.id }}"
+      class="flex justify-between items-center relative font-sans font-semibold rounded-lg border border-primary-light bg-primary-light"
+    >
+      <a
+        href="{{ link.path }}"
+        class="flex justify-between items-center relative top-0 left-0 h-full w-full p-6"
+      >
+        {{ link.title }}
+      </a>
+    </div>
+  {% endfor %}
+{% endfor %}

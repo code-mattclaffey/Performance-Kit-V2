@@ -1,0 +1,30 @@
+{
+  "tutorials": [
+    {
+      "title": "Before you start",
+      "items": [
+        {
+          "title": "🏳️ Getting Started",
+          "path": "./00/getting-started",
+          "id": "getting-started"
+        }
+      ]
+    },
+    {
+      "title": "✏️ Fonts",
+      "items": [
+        {
+          "title": "Part One",
+          "path": "./01/",
+          "id": "font-part-one"
+        },
+        {
+          "title": "Part Two (coming soon)",
+          "path": "./02/",
+          "id": "font-part-two"
+        }
+      ]
+    }
+  ],
+  "videos": []
+}

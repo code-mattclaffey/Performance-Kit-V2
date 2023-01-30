@@ -1,11 +1,11 @@
 ---
 layout: layouts/listings.njk
-title: Tutorials
-description: This page highlights the progress made through the exercises. These links will direct you to guides into how to solve the problem in the exercise.
+title: Video Archive
+description: This page has a list of all the videos made during the lunch and learns.
 backUrl: '/'
 ---
 
-{% for section in navigation.tutorials %}
+{% for section in navigation.videos %}
   <h2 class="font-sans font-medium text-xl md:text-3xl mb-8">{{ section.title }}</h2>
   {% for link in section.items %}
     <div

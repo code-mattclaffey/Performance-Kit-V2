@@ -1,8 +1,6 @@
 (function () {
   'use-strict';
 
-  console.log('Hello');
-
   const getStoreFromLocalStorage = () => {
     const store = JSON.parse(localStorage.getItem('performanceKit')) || {};
     return store;

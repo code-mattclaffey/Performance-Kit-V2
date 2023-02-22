@@ -9,10 +9,12 @@ stylesheet: '/assets/css/index.css'
     {{ content | safe }}
   </article>
 </main>
-<footer class="container mx-auto p-8 max-w-4xl bg-primary-light rounded-xl mb-12 rte">
-  <h2 class="text-3xl md:text-4xl mb-2">Summary</h2>
-  <p class="mb-8">{{ conclusion }}</p>
-  {% include "components/_mark-complete-btn.njk" %}
+<footer class="px-4">
+  <div class="container mx-auto p-8 max-w-4xl bg-primary-light rounded-xl mb-12 rte">
+    <h2 class="text-3xl md:text-4xl mb-2">Summary</h2>
+    <p class="mb-8">{{ conclusion }}</p>
+    {% include "components/_mark-complete-btn.njk" %}
 
-  <p class="mt-8">To make these sessions better it would be great to get some <a href="{{ googleForm }}" target="_blank">feedback</a> around how I can improve this.</p>
+    <p class="mt-8">To make these sessions better it would be great to get some <a href="{{ googleForm }}" target="_blank">feedback</a> around how I can improve this.</p>
+  </div>
 </footer>

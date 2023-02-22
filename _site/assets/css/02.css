@@ -1,0 +1,5 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./_shared/_shared.body.css";
+@import "./_shared/_shared.rte.css";

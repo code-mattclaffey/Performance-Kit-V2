@@ -24,6 +24,16 @@
           "id": "font-part-two"
         }
       ]
+    },
+    {
+      "title": "🌆 Images",
+      "items": [
+        {
+          "title": "Part One",
+          "path": "./03/",
+          "id": "font-part-one"
+        }
+      ]
     }
   ],
   "videos": [

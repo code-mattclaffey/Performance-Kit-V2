@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <style>
+      @font-face {
+        font-family: 'Monoton';
+        font-display: block;
+        src: url('/assets/fonts/woff2/Monoton/monoton-regular-webfont.woff2') format('woff2'),
+            url('/assets/fonts/woffMonoton/monoton-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Rubik";
+        font-display: swap;
+        src: url("/assets/fonts/woff2/Rubik/Rubik-VariableFont_wght.woff2") format("woff2-variations");
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Rubik";
+        font-display: swap;
+        src: url("/assets/fonts/woff2/Rubik/Rubik-Italic-VariableFont_wght.woff2") format("woff2-variations");
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: italic;
+      }
+
+      html {
+        font-family: 'Rubik', Helvetica, Roboto, sans-serif;
+        font-weight: normal;
+      }
+    </style>
+    {% include 'components/_seo.njk' %}
+    <link rel="stylesheet" href="{{ '/assets/css/03.css' | url }}">
+    <script src="{{ '/assets/js/lib/lazysizes.js' | url }}">
+  </head>
+  <body>
+    {% include 'components/_header.njk' %}
+    <main>
+      {% include "components/_banner.njk" %}
+      <article class="container mx-auto px-4 py-8 md:py-20 max-w-12xl space-y-6 rte">
+        {{ content | safe }}
+      </article>
+    </main>
+    {% include 'components/_scripts.njk' %}
+  </body>
+</html>
+
+

@@ -1,0 +1,21 @@
+---
+layout: exercises/03/index.njk
+title: Exercise - Images Part One
+description: The client uses unsplash to load images into their gallery page. They are currently getting a lot of complaints which is resulting to a high bounce rate on the page. When the client checked, they noticed that there pages are loading really really slow. After a consultation, the consultant noticed that the previous developers were loading in the original sized images for the page. Our job is to use a combination of best practice and unsplash api to make the page faster.
+backUrl: '/exercises'
+---
+
+<h2 class="mb-40">Image Gallery Example</h2>
+<div class="c-masonry">
+  {% for image in images.images %}
+    <div class="c-masonry__grid">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        class="c-masonry__grid-image"
+      />
+    </div>
+  {% endfor %}
+</div>
+
+

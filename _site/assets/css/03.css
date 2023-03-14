@@ -1,0 +1,30 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./_shared/_shared.body.css";
+@import "./_shared/_shared.rte.css";
+
+.c-masonry {
+  columns: 2;
+  column-gap: 16px;
+}
+
+@media (min-width: 992px) {
+  .c-masonry {
+    columns: 3;
+  }
+}
+
+.c-masonry__grid {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.c-masonry__grid-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.c-masonry__grid-picture {
+  display: block;
+}

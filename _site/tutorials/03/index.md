@@ -59,7 +59,7 @@ I use an web app called [Squoosh](https://squoosh.app/) which can allow me to ch
 
 ### Image formats
 
-To further bring balance to having a performant website and a high quality imagary, we now want to start looking at what image formats we can use for our site. In the past we just used JPEG's and PNG's but there are other options out there which can massive improve
+To further bring balance to having a performant website and a high quality imagary, we now want to start looking at what image formats we can use for our site. In the past we just used JPEG's and PNG's but there are other options out there which can massive improve the performance of our web page.
 
 #### WebP
 

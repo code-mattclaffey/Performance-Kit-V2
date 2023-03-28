@@ -44,6 +44,21 @@
           "title": "Part One",
           "path": "https://drive.google.com/file/d/1vL_QrmFq5ZABB3yjdVJQZKSHXBJkEnsv/view?usp=share_link",
           "id": "video-fonts-part-one"
+        },
+        {
+          "title": "Part Two",
+          "path": "https://drive.google.com/file/d/1m8bXsmSLrYYlmmNGq1LivJzPRfxbKhBC/view?usp=sharing",
+          "id": "video-fonts-part-two"
+        }
+      ]
+    },
+    {
+      "title": "🌆 Images",
+      "items": [
+        {
+          "title": "Part One",
+          "path": "https://drive.google.com/file/d/11zDaKi_s20eLd6jDZTqGaB06gd0nemOJ/view?usp=sharing",
+          "id": "video-images-part-one"
         }
       ]
     }

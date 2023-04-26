@@ -32,6 +32,11 @@
           "title": "Part One",
           "path": "./03/",
           "id": "images-part-one"
+        },
+        {
+          "title": "Part Two",
+          "path": "./04/",
+          "id": "images-part-two"
         }
       ]
     }
